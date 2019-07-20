@@ -1,0 +1,34 @@
+package com.ssy.jdk8;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+
+/**
+ * @description TODO
+ * @Author YouXu
+ * @Date 2019/7/17 13:57
+ **/
+public class Test01 {
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8);
+        for (int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));
+        }
+        System.out.println("----------------");
+        list.forEach(new Consumer<Integer>() {
+            @Override
+            public void accept(Integer integer) {
+                System.out.println(integer);
+            }
+        });
+
+        //lambda表达式
+        System.out.println("----------------");
+        list.forEach(i -> System.out.println(i));
+
+        //方法引用 method reference
+        System.out.println("----------------");
+        list.forEach(System.out::println);
+    }
+}
