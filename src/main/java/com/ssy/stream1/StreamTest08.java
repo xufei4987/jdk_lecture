@@ -1,4 +1,4 @@
-package com.ssy.stream;
+package com.ssy.stream1;
 
 import java.util.stream.IntStream;
 
@@ -6,6 +6,7 @@ import java.util.stream.IntStream;
  * @description TODO
  * @Author YouXu
  * @Date 2019/7/20 16:43
+ *
  **/
 public class StreamTest08 {
     public static void main(String[] args) {

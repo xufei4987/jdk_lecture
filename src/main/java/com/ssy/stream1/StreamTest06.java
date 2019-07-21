@@ -1,8 +1,7 @@
-package com.ssy.stream;
+package com.ssy.stream1;
 
 import java.util.IntSummaryStatistics;
 import java.util.UUID;
-import java.util.function.BinaryOperator;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 

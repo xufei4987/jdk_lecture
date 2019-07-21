@@ -31,7 +31,7 @@ public class Test03 {
         List<String> stringList2 = new ArrayList<>();
 //        stringList1.forEach(str -> stringList2.add(str.toUpperCase()));
 //        stringList2.forEach(System.out::println);
-//        stringList2 = stringList1.stream().map(str -> str.toUpperCase()).collect(Collectors.toList());
+//        stringList2 = stringList1.stream1().map(str -> str.toUpperCase()).collect(Collectors.toList());
 //        stringList2.forEach(System.out::println);
         stringList1.stream().map(String::toUpperCase).forEach(System.out::println);
 

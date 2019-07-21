@@ -1,4 +1,4 @@
-package com.ssy.stream;
+package com.ssy.stream1;
 
 import java.util.Arrays;
 import java.util.List;

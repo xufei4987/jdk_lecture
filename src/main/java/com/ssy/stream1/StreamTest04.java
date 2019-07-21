@@ -1,10 +1,5 @@
-package com.ssy.stream;
+package com.ssy.stream1;
 
-import sun.security.util.Length;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 

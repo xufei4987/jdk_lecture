@@ -36,7 +36,7 @@ public class PredicateTest2 {
     }
 
     public void conditionFilter(List<Integer> list, Predicate<Integer> predicate){
-//        list.stream().filter(predicate).forEach(System.out::println);
+//        list.stream1().filter(predicate).forEach(System.out::println);
         for (Integer i : list){
             if(predicate.test(i)){
                 System.out.println(i);
