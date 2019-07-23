@@ -1,7 +1,10 @@
 package com.ssy.stream2;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 
 import static java.util.stream.Collectors.*;
@@ -31,5 +34,23 @@ public class StreamTest01 {
         System.out.println(students.equals(students1));
         System.out.println("count:" + students.stream().count());
         System.out.println("count:" + students.stream().collect(counting()));
+        System.out.println("--------------");
+
+        students1.stream().collect(minBy(Comparator.comparingInt(Student::getScore))).ifPresent(System.out::println);
+        students1.stream().collect(maxBy(Comparator.comparingInt(Student::getScore))).ifPresent(System.out::println);
+        System.out.println(students1.stream().collect(averagingDouble(Student::getScore)));
+        System.out.println(students1.stream().collect(summingInt(Student::getScore)));
+        System.out.println(students1.stream().collect(summarizingInt(Student::getScore)));
+        System.out.println(students1.stream().map(Student::getName).collect(joining(",", "<begin>", "<end>")));
+
+        Map<Integer, Map<String, List<Student>>> mapMap = students1.stream().collect(groupingBy(Student::getScore, groupingBy(Student::getName)));
+        System.out.println(mapMap);
+
+        Map<Boolean, List<Student>> map = students1.stream().collect(partitioningBy(student -> student.getScore() > 80));
+        System.out.println(map);
+        Map<Boolean, Map<Boolean, List<Student>>> map1 = students1.stream().collect(partitioningBy(student -> student.getScore() > 80, partitioningBy(stu -> stu.getScore() == 100)));
+        System.out.println(map1);
+        Map<Integer, Long> map2 = students1.stream().collect(groupingBy(Student::getScore, counting()));
+        System.out.println(map2);
     }
 }
