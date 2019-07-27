@@ -54,7 +54,7 @@ public class MySetCollector2<T> implements Collector<T, Set<T>, Map<T,T>> {
     @Override
     public Set<Characteristics> characteristics() {
         System.out.println("characteristics invoked");
-        return Collections.unmodifiableSet(EnumSet.of(Characteristics.UNORDERED));
+        return Collections.unmodifiableSet(EnumSet.of(Characteristics.UNORDERED,Characteristics.CONCURRENT));
     }
 
     public static void main(String[] args) {
